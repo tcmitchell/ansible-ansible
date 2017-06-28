@@ -2,9 +2,9 @@
 # tasks file for ansible-ansible
 - name: Install ansible dependencies
   apt:
-    name={{item}}
-    state=installed
-    update_cache=yes
+    name: "{{ item }}"
+    state: installed
+    update_cache: yes
   with_items:
        - software-properties-common
        - python-pycurl
@@ -13,6 +13,7 @@
     repo: ppa:ansible/ansible
     state: present
 - name: Install ansible
-  apt: name={{item}} state=latest update_cache=yes
-  with_items:
-       - ansible
+  apt:
+    name: ansible
+    state: latest
+    update_cache: yes
