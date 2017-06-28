@@ -1,4 +1,4 @@
-Role Name
+Ansible
 =========
 
 Install the latest version of ansible.
@@ -23,9 +23,16 @@ Example Playbook
 
 Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:
 
-    - hosts: servers
+    - hosts: all
       roles:
-         - { role: username.rolename, x: 42 }
+         - ansible-ansible
+
+Example Usage
+-------------
+
+```shell
+ansible-playbook -b -i "localhost," -c local ansible-ansible/ansible-playbook.yml
+```
 
 License
 -------
