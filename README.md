@@ -31,6 +31,13 @@ Example Usage
 -------------
 
 ```shell
+# Install ansible from apt
+sudo apt-get install ansible
+
+# clone this repository
+git clone https://github.com/tcmitchell/ansible-ansible
+
+# Install the latest ansible
 ansible-playbook -b -i "localhost," -c local ansible-ansible/ansible-playbook.yml
 ```
 
